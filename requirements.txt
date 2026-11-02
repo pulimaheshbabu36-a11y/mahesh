@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+matplotlib
+openai
+openpyxl
+python-dotenv
+python-multipart
+reportlab

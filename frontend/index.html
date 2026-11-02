@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI CSV Report Generator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<!-- =====================================================
+     APPLICATION
+===================================================== -->
+
+<div class="app">
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                AI
+            </div>
+
+            <div>
+                <h1>DataPilot</h1>
+                <span>AI Report Generator</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">
+                WORKSPACE
+            </p>
+
+            <button
+                class="nav-item active"
+                onclick="scrollToSection('overviewSection')"
+            >
+                <span class="nav-icon">⌂</span>
+                Overview
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="scrollToSection('analysisSection')"
+            >
+                <span class="nav-icon">◫</span>
+                Data Analysis
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="scrollToSection('agentSection')"
+            >
+                <span class="nav-icon">✦</span>
+                AI Agent
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="scrollToSection('chartsSection')"
+            >
+                <span class="nav-icon">▥</span>
+                Visualizations
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="scrollToSection('aiReportSection')"
+            >
+                <span class="nav-icon">◈</span>
+                AI Report
+            </button>
+
+
+            <p class="nav-label nav-label-space">
+                REPORTS
+            </p>
+
+            <button
+                class="nav-item"
+                onclick="scrollToSection('historySection')"
+            >
+                <span class="nav-icon">◷</span>
+                Report History
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="ai-status-card">
+
+                <div class="status-header">
+
+                    <span class="status-pulse"></span>
+
+                    <span>
+                        AI Engine Online
+                    </span>
+
+                </div>
+
+                <p>
+                    Autonomous analysis
+                    system ready.
+                </p>
+
+            </div>
+
+            <div class="sidebar-footer">
+                <span>Agentic AI</span>
+                <span>v1.0</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         MAIN APPLICATION
+    ================================================== -->
+
+    <main class="main">
+
+        <!-- =============================================
+             TOP BAR
+        ============================================== -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="mobile-menu"
+                    onclick="toggleSidebar()"
+                >
+                    ☰
+                </button>
+
+                <div>
+
+                    <p class="breadcrumb">
+                        Workspace
+                        <span>/</span>
+                        AI Analytics
+                    </p>
+
+                    <h2>
+                        CSV Intelligence Dashboard
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="api-status">
+
+                    <span class="status-pulse"></span>
+
+                    <span>
+                        API Connected
+                    </span>
+
+                </div>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        AI
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            AI Analyst
+                        </strong>
+
+                        <span>
+                            Agentic Workspace
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =============================================
+             PAGE CONTENT
+        ============================================== -->
+
+        <div class="content">
+
+
+            <!-- =========================================
+                 HERO
+            ========================================== -->
+
+            <section
+                class="hero"
+                id="overviewSection"
+            >
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span>✦</span>
+                        AGENTIC AI ANALYTICS
+                    </div>
+
+                    <h1>
+                        Turn raw CSV data into
+                        <span>intelligent reports.</span>
+                    </h1>
+
+                    <p>
+                        Upload your dataset and let the AI
+                        agent clean, analyze, visualize and
+                        generate a professional report
+                        automatically.
+                    </p>
+
+                    <div class="hero-tags">
+
+                        <span>
+                            ✓ Automated Cleaning
+                        </span>
+
+                        <span>
+                            ✓ AI Insights
+                        </span>
+
+                        <span>
+                            ✓ Smart Charts
+                        </span>
+
+                        <span>
+                            ✓ PDF & Excel
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+
+                    <div class="hero-ai-card">
+
+                        <div class="ai-card-top">
+
+                            <span class="ai-card-icon">
+                                ✦
+                            </span>
+
+                            <span>
+                                AI AGENT
+                            </span>
+
+                            <span class="live-dot">
+                                LIVE
+                            </span>
+
+                        </div>
+
+                        <div class="ai-card-lines">
+
+                            <div>
+                                <span></span>
+                                Dataset inspection
+                                <b>✓</b>
+                            </div>
+
+                            <div>
+                                <span></span>
+                                Statistical analysis
+                                <b>✓</b>
+                            </div>
+
+                            <div>
+                                <span></span>
+                                Insight generation
+                                <b>✓</b>
+                            </div>
+
+                            <div>
+                                <span></span>
+                                Report creation
+                                <b>AI</b>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 UPLOAD
+            ========================================== -->
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            STEP 01
+                        </span>
+
+                        <h3>
+                            Upload your dataset
+                        </h3>
+
+                        <p>
+                            Start by uploading a CSV file.
+                            The AI agent will handle the
+                            rest.
+                        </p>
+
+                    </div>
+
+                    <div class="step-badge">
+                        CSV
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="upload-card"
+                    id="uploadArea"
+                >
+
+                    <div class="upload-illustration">
+
+                        <div class="upload-circle">
+                            ↑
+                        </div>
+
+                    </div>
+
+                    <div class="upload-content">
+
+                        <h3>
+                            Drop your CSV file here
+                        </h3>
+
+                        <p>
+                            or choose a file from your computer
+                        </p>
+
+                        <label
+                            for="csvFile"
+                            class="choose-file-btn"
+                            id="selectFileButton"
+                        >
+                            Choose CSV File
+                        </label>
+
+                        <input
+                            type="file"
+                            id="csvFile"
+                            accept=".csv"
+                        >
+
+                        <div
+                            class="selected-file"
+                            id="selectedFile"
+                        >
+                            No file selected
+                        </div>
+
+                        <div class="upload-meta">
+
+                            <span>
+                                CSV only
+                            </span>
+
+                            <span>
+                                Maximum 10 MB
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="upload-main-btn"
+                        id="uploadButton"
+                    >
+                        <span>Upload Dataset</span>
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="message"
+                    id="uploadMessage"
+                ></div>
+
+            </section>
+
+
+            <!-- =========================================
+                 KPI
+            ========================================== -->
+
+            <section class="kpi-grid">
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>ROWS</span>
+                        <div class="kpi-icon blue">▤</div>
+                    </div>
+
+                    <strong id="kpiRows">
+                        —
+                    </strong>
+
+                    <p>
+                        Dataset records
+                    </p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>COLUMNS</span>
+                        <div class="kpi-icon purple">▥</div>
+                    </div>
+
+                    <strong id="kpiColumns">
+                        —
+                    </strong>
+
+                    <p>
+                        Data attributes
+                    </p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>MISSING</span>
+                        <div class="kpi-icon orange">!</div>
+                    </div>
+
+                    <strong id="kpiMissing">
+                        —
+                    </strong>
+
+                    <p>
+                        Missing values
+                    </p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>DUPLICATES</span>
+                        <div class="kpi-icon red">◇</div>
+                    </div>
+
+                    <strong id="kpiDuplicates">
+                        —
+                    </strong>
+
+                    <p>
+                        Duplicate records
+                    </p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>AI STEPS</span>
+                        <div class="kpi-icon green">✦</div>
+                    </div>
+
+                    <strong id="kpiSteps">
+                        —
+                    </strong>
+
+                    <p>
+                        Agent actions
+                    </p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>CHARTS</span>
+                        <div class="kpi-icon cyan">▥</div>
+                    </div>
+
+                    <strong id="kpiCharts">
+                        —
+                    </strong>
+
+                    <p>
+                        Generated visuals
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 ACTION BAR
+            ========================================== -->
+
+            <section class="action-bar">
+
+                <div>
+
+                    <span class="section-kicker">
+                        QUICK ACTIONS
+                    </span>
+
+                    <h3>
+                        Explore your dataset
+                    </h3>
+
+                </div>
+
+
+                <div class="action-buttons">
+
+                    <button
+                        class="action-btn secondary"
+                        id="previewButton"
+                        disabled
+                    >
+                        <span>◫</span>
+                        Preview
+                    </button>
+
+                    <button
+                        class="action-btn secondary"
+                        id="statisticsButton"
+                        disabled
+                    >
+                        <span>▥</span>
+                        Statistics
+                    </button>
+
+                    <button
+                        class="action-btn primary"
+                        id="agentButton"
+                        disabled
+                    >
+                        <span>✦</span>
+                        Run AI Agent
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 AGENT
+            ========================================== -->
+
+            <section
+                class="agent-panel"
+                id="agentSection"
+            >
+
+                <div class="agent-panel-header">
+
+                    <div class="agent-title">
+
+                        <div class="agent-icon">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <span class="section-kicker">
+                                STEP 02
+                            </span>
+
+                            <h3>
+                                Autonomous AI Agent
+                            </h3>
+
+                            <p>
+                                The agent decides which
+                                analytical tools to execute.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="agent-status-badge"
+                        id="agentStatusBadge"
+                    >
+                        Ready
+                    </div>
+
+                </div>
+
+
+                <div class="agent-progress">
+
+                    <div class="progress-top">
+
+                        <span>
+                            Agent workflow
+                        </span>
+
+                        <strong
+                            id="agentProgressText"
+                        >
+                            0 / 8 steps
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            class="progress-fill"
+                            id="agentProgressBar"
+                        ></div>
+
+                    </div>
+
+                    <div
+                        class="agent-activity"
+                        id="agentActivity"
+                    >
+                        Upload a dataset and start
+                        the AI agent.
+                    </div>
+
+                </div>
+
+
+                <div class="agent-flow">
+
+                    <div class="flow-node">
+                        <span>01</span>
+                        <strong>Inspect</strong>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="flow-node">
+                        <span>02</span>
+                        <strong>Clean</strong>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="flow-node">
+                        <span>03</span>
+                        <strong>Analyze</strong>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="flow-node">
+                        <span>04</span>
+                        <strong>Visualize</strong>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="flow-node highlight">
+                        <span>05</span>
+                        <strong>AI Report</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 REPORT
+            ========================================== -->
+
+            <section
+                class="report-section"
+                id="analysisSection"
+            >
+
+                <div class="report-header">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            ANALYTICS WORKSPACE
+                        </span>
+
+                        <h3>
+                            Dataset Intelligence
+                        </h3>
+
+                    </div>
+
+                    <div class="report-actions">
+
+                        <button
+                            class="download-btn pdf"
+                            id="downloadPdfButton"
+                            disabled
+                        >
+                            ↓ PDF Report
+                        </button>
+
+                        <button
+                            class="download-btn excel"
+                            id="downloadExcelButton"
+                            disabled
+                        >
+                            ↓ Excel
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="report-empty"
+                    id="reportEmpty"
+                >
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Your intelligence report
+                        will appear here
+                    </h3>
+
+                    <p>
+                        Upload a CSV and run the AI agent
+                        to generate your complete analysis.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="report-content"
+                    id="reportContent"
+                >
+
+
+                    <!-- Dataset Overview -->
+
+                    <div class="report-block">
+
+                        <div class="block-title">
+
+                            <span class="block-icon">
+                                ◫
+                            </span>
+
+                            <div>
+                                <h4>
+                                    Dataset Overview
+                                </h4>
+
+                                <p>
+                                    High-level dataset information
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="datasetOverview"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- CSV Preview -->
+
+                    <div class="report-block">
+
+                        <div class="block-title">
+
+                            <span class="block-icon">
+                                ▤
+                            </span>
+
+                            <div>
+                                <h4>
+                                    Data Preview
+                                </h4>
+
+                                <p>
+                                    Sample records from the dataset
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="csvPreview"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Insights -->
+
+                    <div class="report-block">
+
+                        <div class="block-title">
+
+                            <span class="block-icon">
+                                ✦
+                            </span>
+
+                            <div>
+                                <h4>
+                                    Automated Insights
+                                </h4>
+
+                                <p>
+                                    Findings extracted from your data
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="insights"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Statistics -->
+
+                    <div class="report-block">
+
+                        <div class="block-title">
+
+                            <span class="block-icon">
+                                ∑
+                            </span>
+
+                            <div>
+                                <h4>
+                                    Statistical Analysis
+                                </h4>
+
+                                <p>
+                                    Detailed numerical analysis
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="analysis-subsection">
+
+                            <h5>
+                                Numeric Analysis
+                            </h5>
+
+                            <div
+                                id="numericAnalysis"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="analysis-subsection">
+
+                            <h5>
+                                Categorical Analysis
+                            </h5>
+
+                            <div
+                                id="categoricalAnalysis"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="analysis-subsection">
+
+                            <h5>
+                                Correlation Analysis
+                            </h5>
+
+                            <div
+                                id="correlationAnalysis"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="analysis-subsection">
+
+                            <h5>
+                                Time-Series Analysis
+                            </h5>
+
+                            <div
+                                id="timeSeriesAnalysis"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Agent Workflow -->
+
+                    <div class="report-block">
+
+                        <div class="block-title">
+
+                            <span class="block-icon">
+                                ◎
+                            </span>
+
+                            <div>
+                                <h4>
+                                    Agent Decision Log
+                                </h4>
+
+                                <p>
+                                    Actions selected by the AI agent
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="agentWorkflow"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Tool Results -->
+
+                    <div class="report-block">
+
+                        <div class="block-title">
+
+                            <span class="block-icon">
+                                ⚙
+                            </span>
+
+                            <div>
+                                <h4>
+                                    Tool Execution Results
+                                </h4>
+
+                                <p>
+                                    Raw results returned by analytical tools
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="toolResults"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- AI Report -->
+
+                    <div
+                        class="report-block ai-report-block"
+                        id="aiReportSection"
+                    >
+
+                        <div class="ai-report-header">
+
+                            <div class="block-title">
+
+                                <span class="block-icon ai">
+                                    ✦
+                                </span>
+
+                                <div>
+
+                                    <h4>
+                                        AI Generated Report
+                                    </h4>
+
+                                    <p>
+                                        Intelligent interpretation of
+                                        your dataset
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="ai-powered">
+                                POWERED BY AI
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="ai-report"
+                            id="aiReport"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Charts -->
+
+                    <div
+                        class="report-block"
+                        id="chartsSection"
+                    >
+
+                        <div class="block-title">
+
+                            <span class="block-icon">
+                                ▥
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Data Visualizations
+                                </h4>
+
+                                <p>
+                                    Charts generated automatically
+                                    by the analysis engine
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="charts-grid"
+                            id="chartsContainer"
+                        ></div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 HISTORY
+            ========================================== -->
+
+            <section
+                class="history-section"
+                id="historySection"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            REPORTS
+                        </span>
+
+                        <h3>
+                            Report History
+                        </h3>
+
+                        <p>
+                            Previously generated reports
+                            stored in your workspace.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="refresh-btn"
+                        id="refreshHistoryButton"
+                    >
+                        ↻ Refresh
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="historyContainer"
+                    class="history-container"
+                ></div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- =============================================
+             FOOTER
+        ============================================== -->
+
+        <footer>
+
+            <div class="footer-brand">
+
+                <div class="brand-logo small">
+                    AI
+                </div>
+
+                <strong>
+                    DataPilot
+                </strong>
+
+            </div>
+
+            <span>
+                AI CSV Report Generator
+                • Agentic AI Analytics Platform
+            </span>
+
+            <span>
+                v1.0.0
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
